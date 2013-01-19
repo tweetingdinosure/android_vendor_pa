@@ -22,7 +22,7 @@ PARANOID_BOOTANIMATION_NAME := HDPI
 OVERLAY_TARGET := pa_hdpi
 
 # Build paprefs from sources
-PREFS_FROM_SOURCE ?= false
+PREFS_FROM_SOURCE ?= true
 
 # Include ParanoidAndroid common configuration
 include vendor/pa/config/pa_common.mk
@@ -30,17 +30,17 @@ include vendor/pa/config/pa_common.mk
 # Inherit AOSP device configuration
 $(call inherit-product, device/htc/bravo/full_bravo.mk)
 
-# Product Package Extras - Repos can be added manually or via addprojects.py
--include vendor/pa/packages/cm.mk
-
 # Override AOSP build properties
 PRODUCT_NAME    := pa_bravo
 PRODUCT_BRAND   := htc_wwe
-PRODUCT_DEVICE  := bravo
 PRODUCT_MODEL   := HTC Desire
 PRODUCT_MANUFACTURER := HTC
-PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_bravo BUILD_FINGERPRINT=htc_wwe/htc_bravo/bravo:2.3.3/GRI40/96875.1:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys PRIVATE_BUILD_DESC="3.14.405.1 CL96875 release-keys"
+PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=htc_bravo BUILD_FINGERPRINT=htc_wwe/htc_bravo/bravo:2.3.3/GRI40/96875.1:user/release-keys TARGET_BUILD_TYPE=userdebug BUILD_VERSION_TAGS=release-keys
+PRIVATE_BUILD_DESC="3.14.405.1 CL96875 release-keys"
 
+# Product Package Extras - Repos can be added manually or via addprojects.py
+-include vendor/pa/packages/$(PRODUCT_NAME).mk
+-include vendor/pa/packages/cm.mk
 
 # Update local_manifest.xml
 GET_VENDOR_PROPS := $(shell vendor/pa/tools/getvendorprops.py $(PRODUCT_NAME))
