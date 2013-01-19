@@ -1,0 +1,19 @@
+BASEDIR=`dirname $0`
+CURL="curl --retry 5 --silent --show-error"
+UNPACK="unzip -q -o"
+
+echo "Fetching prebuilts:"
+
+set -e
+mkdir -p $BASEDIR/prebuilt/common/{app,lib}
+
+# Get GooManager (Source: http://goo.im/devs/s0updev/goomanager)
+echo "* Goo Manager"
+$CURL -L -o $BASEDIR/prebuilt/common/apk/GooManager.apk -O -L "http://goo.im/devs/s0updev/goomanager/GooManager_2.1.2.apk"
+
+# Get Android Terminal Emulator (we use a prebuilt so it can update from the Market)
+echo "* Android Terminal Emulator"
+$CURL -L -o $BASEDIR/prebuilt/common/apk/Term.apk -O -L "http://jackpal.github.com/Android-Terminal-Emulator/downloads/Term.apk"
+$UNPACK -j -d $BASEDIR/prebuilt/common/lib $BASEDIR/prebuilt/common/apk/Term.apk lib/armeabi/libjackpal-androidterm4.so
+
+set +e

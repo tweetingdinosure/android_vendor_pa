@@ -1,0 +1,7 @@
+# Ignore downloaded components
+prebuilt/common/apk/*.apk
+prebuilt/common/apk/*.zip
+prebuilt/common/lib/*
+
+# Ignore download stamp
+prebuilt/common/.get-prebuilts
