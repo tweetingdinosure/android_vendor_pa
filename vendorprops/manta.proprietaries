@@ -19,5 +19,10 @@
         "repository":   "proprietary_vendor_samsung",
         "target_path":  "vendor/samsung",
         "revision":     "cm-10.1"
+    },
+    {
+        "account":      "platform",
+        "repository":   "hardware/samsung_slsi/exynos5",
+        "target_path":  "hardware/samsung_slsi/exynos5"
     }
 ]

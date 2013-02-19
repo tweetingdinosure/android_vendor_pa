@@ -40,5 +40,35 @@
         "repository":   "proprietary_vendor_widevine",
         "target_path":  "vendor/widevine",
         "revision":     "cm-10.1"
+    },
+    {
+        "account":      "platform",
+        "repository":   "hardware/broadcom/wlan",
+        "target_path":  "hardware/broadcom/wlan"
+    },
+    {
+        "account":      "platform",
+        "repository":   "hardware/invensense",
+        "target_path":  "hardware/invensense"
+    },
+    {
+        "account":      "platform",
+        "repository":   "hardware/ti/omap3",
+        "target_path":  "hardware/ti/omap3"
+    },
+    {
+        "account":      "platform",
+        "repository":   "hardware/ti/omap4xxx",
+        "target_path":  "hardware/ti/omap4xxx"
+    },
+    {
+        "account":      "platform",
+        "repository":   "hardware/ti/wlan",
+        "target_path":  "hardware/ti/wlan"
+    },
+    {
+        "account":      "platform",
+        "repository":   "hardware/ti/wpan",
+        "target_path":  "hardware/ti/wpan"
     }
 ]
