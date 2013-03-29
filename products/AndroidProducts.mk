@@ -46,3 +46,6 @@ endif
 ifeq (pa_ruby,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_ruby.mk
 endif
+ifeq (pa_d710,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_d710.mk
+endif
