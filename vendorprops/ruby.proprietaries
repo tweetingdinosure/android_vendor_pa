@@ -1,0 +1,8 @@
+[
+    {
+        "account":      "CM-Ruby",
+        "repository":   "proprietary_vendor_htc_ruby",
+        "target_path":  "vendor/htc",
+        "revision":     "jellybean"
+    }
+]

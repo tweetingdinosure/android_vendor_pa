@@ -1,3 +1,4 @@
+add_lunch_combo pa_d710-userdebug
 add_lunch_combo pa_grouper-userdebug
 add_lunch_combo pa_i9100-userdebug
 add_lunch_combo pa_i9300-userdebug
@@ -12,3 +13,4 @@ add_lunch_combo pa_toro-userdebug
 add_lunch_combo pa_toroplus-userdebug
 add_lunch_combo pa_crespo-userdebug
 add_lunch_combo pa_endeavoru-userdebug
+add_lunch_combo pa_ruby-userdebug
